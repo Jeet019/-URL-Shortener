@@ -1,7 +1,7 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
-let MONGODB_URL = "mongodb+srv://Jeet:7N9aTD1bBD6zDqUs@urlcluster0.aj6xuku.mongodb.net/url-shortener"
-
+let MONGODB_URL = process.env.mongourl
 const connectDB = async() => {
     // Connect to MongoDB using Mongoose
    await mongoose.connect(MONGODB_URL)
